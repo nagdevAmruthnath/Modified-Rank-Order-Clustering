@@ -1,4 +1,14 @@
-
+#***************************************************************************************/
+#*    Title: (Modified) Rank Order Clustering
+#*    Author: Nagdev Amruthnath
+#*    Date: 2017
+#*    Code version: 0.1.0
+#*    Availability: https://github.com/nagdevAmruthnath/-mod--Rank-order-clustering
+#*    
+#*    Note: If MROC is used for research or publication, please use citation (Amruthnath, 2016)
+#*          in readme.md
+#***************************************************************************************/
+(Version 2.0) [Source code]. http://www.graphicsdrawer.com
 
 # function to compute colweights
 colWeightFun<- function(data,row,col,colWeight){
