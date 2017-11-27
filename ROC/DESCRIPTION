@@ -1,0 +1,12 @@
+Package: ROC
+Type: Package
+Title: Rank Order Clustering
+Version: 0.1.0
+Author: Nagdev Amruthnath
+Maintainer: Nagdev Amruthnath <nagdev.amruthnath92@gmail.com>
+Description: This package creates a rank ordered matrix for clustering. Rank order clustering is also known as group technology analysis. This is mainly used in production flow analysis
+License: NONE
+Encoding: UTF-8
+LazyData: true
+NeedsCompilation: no
+Packaged: 2017-11-22 22:33:40 UTC; aanamruthn
