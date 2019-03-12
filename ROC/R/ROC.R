@@ -2,7 +2,7 @@
 #*    Title: (Modified) Rank Order Clustering
 #*    Author: Nagdev Amruthnath
 #*    Date: 2017
-#*    Code version: 0.1.0
+#*    Code version: 0.2.0
 #*    Availability: https://github.com/nagdevAmruthnath/-mod--Rank-order-clustering
 #*    
 #*    Note: If MROC is used for research or publication, please use citation (Amruthnath, 2016)
@@ -42,16 +42,16 @@ ROC <- function(data) {
 
   #data <- data.frame(data)
   #Assign Column numbers
-  col <- ncol(data)
-  colnames(data) <- 1:col
+  col <- ncol(data)-1
+  colnames(data) <- 0:col
   colWeight <- data.frame(colWeight = integer())
   for (i in 1:col) {
     colWeight[i,] <- 2 ^ i
   }
   colWeight<-data.frame(colWeight=sort(colWeight$colWeight, decreasing=T))
   #Assign Row numbers
-  row <- nrow(data)
-  rownames(data) <- 1:row
+  row <- nrow(data)-1
+  rownames(data) <- 0:row
   rowWeight <- data.frame(rowWeight = integer())
   for (i in 1:row) {
     rowWeight[i,] <- 2 ^ i
@@ -100,16 +100,16 @@ MROC <- function(data, compWeight, machineWeight) {
 
   #data <- data.frame(data)
   #Assign Column numbers
-  col <- ncol(data)
-  colnames(data) <- 1:col
+  col <- ncol(data)-1
+  colnames(data) <- 0:col
   colWeight <- data.frame(colWeight = integer())
   for (i in 1:col) {
     colWeight[i,] <- 2 ^ i
   }
   colWeight<-data.frame(colWeight=sort(colWeight$colWeight, decreasing=T))
   #Assign Row numbers
-  row <- nrow(data)
-  rownames(data) <- 1:row
+  row <- nrow(data)-1
+  rownames(data) <- 0:row
   rowWeight <- data.frame(rowWeight = integer())
   for (i in 1:row) {
     rowWeight[i,] <- 2 ^ i
