@@ -8,7 +8,7 @@
 #*    Note: If MROC is used for research or publication, please use citation (Amruthnath, 2016)
 #*          in readme.md
 #***************************************************************************************/
-(Version 2.0) [Source code]. http://www.graphicsdrawer.com
+##(Version 2.0) [Source code]. http://www.graphicsdrawer.com
 
 # function to compute colweights
 colWeightFun<- function(data,row,col,colWeight){
