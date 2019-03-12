@@ -13,8 +13,8 @@
 # function to compute colweights
 colWeightFun<- function(data,row,col,colWeight){
       binRowWeight<-data.frame(binRowWeight=integer())
-          for(j in 1:row){
-                      for (i in 1:col){
+          for(j in 0:row){
+                      for (i in 0:col){
                         binRowWeight[i,]<-colWeight[i,]*data[j,i]
 
                       }
@@ -26,8 +26,8 @@ colWeightFun<- function(data,row,col,colWeight){
 # function to compute rowWeights
 rowWeightFun<- function(CW_1,row,col,rowWeight){
       binColWeight<-data.frame(binColWeight=integer())
-            for(j in 1:col){
-                      for (i in 1:row){
+            for(j in 0:col){
+                      for (i in 0:row){
                         binColWeight[i,]<-rowWeight[i,]*CW_1[i,j]
 
                       }
@@ -45,7 +45,7 @@ ROC <- function(data) {
   col <- ncol(data)-1
   colnames(data) <- 0:col
   colWeight <- data.frame(colWeight = integer())
-  for (i in 1:col) {
+  for (i in 0:col) {
     colWeight[i,] <- 2 ^ i
   }
   colWeight<-data.frame(colWeight=sort(colWeight$colWeight, decreasing=T))
@@ -53,7 +53,7 @@ ROC <- function(data) {
   row <- nrow(data)-1
   rownames(data) <- 0:row
   rowWeight <- data.frame(rowWeight = integer())
-  for (i in 1:row) {
+  for (i in 0:row) {
     rowWeight[i,] <- 2 ^ i
   }
 rowWeight<-data.frame(rowWeight=sort(rowWeight$rowWeight, decreasing=T))
@@ -103,7 +103,7 @@ MROC <- function(data, compWeight, machineWeight) {
   col <- ncol(data)-1
   colnames(data) <- 0:col
   colWeight <- data.frame(colWeight = integer())
-  for (i in 1:col) {
+  for (i in 0:col) {
     colWeight[i,] <- 2 ^ i
   }
   colWeight<-data.frame(colWeight=sort(colWeight$colWeight, decreasing=T))
@@ -111,7 +111,7 @@ MROC <- function(data, compWeight, machineWeight) {
   row <- nrow(data)-1
   rownames(data) <- 0:row
   rowWeight <- data.frame(rowWeight = integer())
-  for (i in 1:row) {
+  for (i in 0:row) {
     rowWeight[i,] <- 2 ^ i
   }
   rowWeight<-data.frame(rowWeight=sort(rowWeight$rowWeight, decreasing=T))
