@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nagdevAmruthnath/Modified-Rank-Order-Clustering/master?urlpath=rstudio)
+
 # Modified Rank Order Clustering
 
 This REPO contains source code (in -mod--Rank-order-clustering/ROC/R/ROC.R) as well as package file (ROC_0.1.0.zip file in root) for Modified & Rank Order clustering. This package contains two functions ROC() and MROC(). ROC function runs based on algorithm proposed by King in 1980. MROC function is based on the algorithm proposed by Amruthnath in 2016. The package includes documentation. 
