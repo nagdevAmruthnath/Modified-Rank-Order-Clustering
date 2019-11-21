@@ -1,1 +1,5 @@
+default-jre
+default-jdk
 r-cran-rjava
+libgdal-dev 
+libproj-dev
